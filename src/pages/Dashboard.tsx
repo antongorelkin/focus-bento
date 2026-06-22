@@ -21,7 +21,7 @@ interface DashboardProps {
 
 export default function Dashboard({ session }: DashboardProps) {
 	const [profile, setProfile] = useState<UserProfile | null>(null);
-	const [loading, setLoading] = useState(true);
+	const [_loading, setLoading] = useState(true);
 	const [tasks, setTasks] = useState<Task[]>([]);
 	const [isCreating, setIsCreating] = useState(false);
 	const [draggedTaskId, setDraggedTaskId] = useState<string | null>(null);
@@ -373,7 +373,7 @@ export default function Dashboard({ session }: DashboardProps) {
 											onDragStart={(e) => handleDragStart(e, task.id)}
 											onDragEnd={() => setDraggedTaskId(null)}
 											onClick={() => setSelectedTaskTime(task.estimated_time)}
-											className={`p-4 bg-slate-950 border rounded-xl hover:border-slate-700/80 transition-all duration-200 cursor-grab active:cursor-grabbing group shadow-sm flex flex-col justify-between min-h-[120px] ${
+											className={`p-4 bg-slate-950 border rounded-xl hover:border-slate-700/80 transition-all duration-200 cursor-grab active:cursor-grabbing group shadow-sm flex flex-col justify-between min-h-30 ${
 												selectedTaskTime === task.estimated_time
 													? "border-amber-500/40 shadow-md shadow-amber-500/2"
 													: "border-slate-800/80"

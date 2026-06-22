@@ -20,7 +20,7 @@ export const getUserProfile = async (userId: string): Promise<UserProfile | null
   return data;
 }
 
-export const addXpToUser = async (userId: string, currentXp: number, currentLevel: number, xpToAdd: number): Promise<UserProfile> => {
+export const addXpToUser = async (userId: string, currentXp: number, _currentLevel: number, xpToAdd: number): Promise<UserProfile> => {
   const totalXp = Math.max(0, currentXp + xpToAdd);
   const newLevel = Math.max(1, Math.floor(totalXp / 100) + 1);
 

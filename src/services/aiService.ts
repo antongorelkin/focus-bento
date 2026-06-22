@@ -1,8 +1,6 @@
 import OpenAI from 'openai';
 import type { Task } from '../types';
 
-const apiKey = import.meta.env.VITE_AI_API_KEY;
-const aiBaseUrl = import.meta.env.VITE_AI_BASE_URL;
 
 const aiClient = new OpenAI({
   apiKey: import.meta.env.VITE_AI_API_KEY,

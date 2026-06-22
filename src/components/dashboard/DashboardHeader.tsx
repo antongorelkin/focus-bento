@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { generateFocusAdvice } from "../../services/aiService";
 import { PamodoroTimer } from "./PamodoroTimer";
 import type { Task } from "../../types";
