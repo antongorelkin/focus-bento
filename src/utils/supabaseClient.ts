@@ -4,7 +4,7 @@ const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || '';
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
 
 if (!supabaseUrl || !supabaseAnonKey) {
-  console.warn("Критические ключи Supabase отсутствуют!");
+  console.warn("Критические ключи Supabase отсутствуют в .env файле!");
 }
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
