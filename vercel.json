@@ -1,29 +1,12 @@
 {
 	"rewrites": [
 		{
-			"source": "/supabase-api/v1/:path*",
-			"destination": "https://supabase.co*"
-		},
-		{
-			"source": "/supabase-api/auth/v1/:path*",
-			"destination": "https://supabase.co*"
-		},
-		{
-			"source": "/supabase-api/functions/v1/:path*",
+			"source": "/supabase-api/:path*",
 			"destination": "https://supabase.co*"
 		},
 		{
 			"source": "/(.*)",
 			"destination": "/index.html"
-		}
-	],
-	"headers": [
-		{
-			"source": "/supabase-api/(.*)",
-			"headers": [
-				{ "key": "Cache-Control", "value": "no-store, max-age=0" },
-				{ "key": "Connection", "value": "keep-alive" }
-			]
 		}
 	]
 }
