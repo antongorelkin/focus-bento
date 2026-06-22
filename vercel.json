@@ -1,8 +1,16 @@
 {
 	"rewrites": [
 		{
-			"source": "/supabase-api/(.*)",
-			"destination": "https://supabase.co"
+			"source": "/supabase-api/v1/:path*",
+			"destination": "https://supabase.co*"
+		},
+		{
+			"source": "/supabase-api/auth/v1/:path*",
+			"destination": "https://supabase.co*"
+		},
+		{
+			"source": "/supabase-api/functions/v1/:path*",
+			"destination": "https://supabase.co*"
 		},
 		{
 			"source": "/(.*)",
